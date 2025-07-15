@@ -1,44 +1,39 @@
-/* Загальні стилі */
+/* ====== GLOBAL ====== */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
   color: #111;
   line-height: 1.6;
+  /* напівпрозорий чорний‑червоний фон */
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,0,0,0.6));
 }
 
-/* Хедер */
+/* ====== HEADER ====== */
 header {
-  background-color: #000;
+  background: rgba(0,0,0,0.9);
   color: #fff;
   text-align: center;
-  padding: 20px 10px;
+  padding: 25px 10px 30px;
 }
 
 header img.logo {
-  max-width: 250px;
+  max-width: 260px;
   height: auto;
   margin-bottom: 10px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin: 10px 0 5px;
   color: #ff0000;
   text-shadow: 2px 2px #300000;
 }
 
-header p {
-  font-size: 1.1rem;
-  margin: 0;
-  color: #ddd;
-}
+header p { margin: 0; color: #ddd; }
 
-/* Навігація */
-nav {
-  margin-top: 15px;
-}
+nav { margin-top: 15px; }
 
 nav a {
   color: #fff;
@@ -46,38 +41,57 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color .3s;
 }
 
-nav a:hover {
-  color: #ff0000;
-}
+nav a:hover { color: #ff0000; }
 
-/* Основні секції */
+/* ====== SECTIONS ====== */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   max-width: 1200px;
   margin: auto;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
 
 h2 {
   color: #d00000;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  border-bottom: 2px solid #d00000;
-  display: inline-block;
+  font-size: 2.1rem;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-/* Категорії */
+/* ====== FEEDBACK CTA ====== */
+#feedback p { text-align: center; }
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 12px 5px 0;
+  background: #d00000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background .3s;
+}
+
+.button:hover { background: #b00000; }
+
+.button.big { font-size: 1.2rem; padding: 14px 28px; }
+
+/* ====== CATALOG ====== */
 .category {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .category h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: #d00000;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .category img {
@@ -86,127 +100,94 @@ h2 {
   height: auto;
   border-radius: 10px;
   display: block;
-  margin: 0 auto 15px;
+  margin: 0 auto 18px;
 }
 
 .category p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Контакти */
+/* ====== BRANDS ====== */
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 25px;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.brand-list span { white-space: nowrap; }
+
+/* ====== CONTACTS ====== */
 .contact-info {
-  background-color: #fff;
+  background: rgba(255,255,255,0.95);
   padding: 20px;
   border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.contact-info p {
-  margin: 5px 0;
-  font-size: 1.1rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 18px;
-  margin: 10px 5px 0 0;
-  background-color: #d00000;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #b00000;
-}
-
-/* Карта */
 .map iframe {
-  border: none;
   width: 100%;
   height: 300px;
+  border: none;
   border-radius: 8px;
+  margin-bottom: 25px;
 }
 
-/* Форма */
+/* ====== FORM ====== */
 form {
-  background-color: #fff;
-  padding: 25px;
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-form h3 {
-  margin-top: 0;
-  color: #d00000;
-}
+form h3 { margin-top: 0; color: #d00000; }
 
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
+form label { display: block; margin-top: 12px; font-weight: bold; }
 
-form input,
-form textarea {
+form input, form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 6px;
-  margin-bottom: 15px;
-  border-radius: 6px;
   border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
 }
 
+form textarea { min-height: 120px; resize: vertical; }
+
 form button {
-  background-color: #d00000;
-  color: white;
+  background: #d00000;
+  color: #fff;
   border: none;
-  padding: 12px 25px;
+  padding: 14px 28px;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  transition: background .3s;
 }
 
-form button:hover {
-  background-color: #b00000;
-}
+form button:hover { background: #b00000; }
 
-/* Футер */
+/* ====== FOOTER ====== */
 footer {
-  background-color: #000;
+  background: rgba(0,0,0,0.9);
   color: #fff;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  margin-top: 40px;
+  padding: 18px 10px;
+  font-size: .9rem;
 }
 
-/* Адаптивність */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .category {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 10px 8px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .category img {
-    max-width: 100%;
-    height: auto;
-  }
+  header h1 { font-size: 2.1rem; }
+  .brand-list { font-size: 1.15rem; }
+  .category img { max-width: 100%; }
 }
