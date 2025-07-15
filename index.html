@@ -1,65 +1,103 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автозапчастини</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVTOZONA - Автозапчастини</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img.logo {
+      max-width: 250px;
+      margin-bottom: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #d00000;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 20px;
+    }
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .category img {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    .contact-info p {
+      margin: 5px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: #d00000;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .map iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #d00000;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Продаж автозапчастин</h1>
-        <nav>
-            <a href="#about">Про нас</a>
-            <a href="#catalog">Асортимент</a>
-            <a href="#brands">Бренди</a>
-            <a href="#contacts">Контакти</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>Про нас</h2>
-        <p>Ми спеціалізуємось на продажу якісних автозапчастин до легкових та вантажних автомобілів. Швидка доставка, надійні бренди та доступні ціни.</p>
-    </section>
-
-    <section id="catalog">
-        <h2>Асортимент</h2>
-        <ul>
-            <li>Гальмівна система</li>
-            <li>Підвіска та рульове керування</li>
-            <li>Двигуни та комплектуючі</li>
-            <li>Електрообладнання</li>
-            <li>Кузовні запчастини</li>
-        </ul>
-    </section>
-
-    <section id="brands">
-        <h2>Бренди</h2>
-        <p>Ми співпрацюємо з провідними брендами: Bosch, Sachs, Lemforder, Brembo, Mahle та іншими.</p>
-    </section>
-
-    <section id="contacts">
-        <h2>Контакти</h2>
-        <div class="contact-info">
-            <p>Телефон: +380 99 999 99 99</p>
-            <p>Email: autoparts@example.com</p>
-            <a class="button telegram" href="https://t.me/yourtelegram" target="_blank">Telegram</a>
-            <a class="button viber" href="viber://chat?number=%2B380999999999">Viber</a>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <form action="https://formspree.io/f/xgepqvqq" method="POST">
-            <h3>Зворотний зв'язок</h3>
-            <input type="text" name="name" placeholder="Ваше ім’я?" required>
-            <input type="text" name="contact" placeholder="Номер телефону або пошта" required>
-            <textarea name="message" placeholder="Ваш запит?" required></textarea>
-            <button type="submit">Відправити</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Автозапчастини</p>
-    </footer>
-</body>
-</html>
+  <header>
+    <img src="e2a4d914-5cde-484b-bb34-cc85f63cca40.png" alt="AVTOZONA Logo" class="logo" />
+    <h1>AVTOZONA</h1>
+    <p>Your One-Stop Au
