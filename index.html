@@ -3,8 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AVTOZONA — Автозапчастини</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>AVTOZONA — Автозапчастини</title>
+  <!-- 🔗 Якщо хочеш тримати окремий style.css, прибери <style> та вкажи <link rel="stylesheet" href="style.css"> -->
+  <style>
+    /* ===== GLOBAL ===== */
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+      color:#111;
+      line-height:1.6;
+      background:linear-gradient(135deg,rgba(0,0,0,.6),rgba(150,0,0,.6));
+    }
+    a{color:inherit;}
+
+    /* ===== HEADER ===== */
+    header{background:rgba(0,0,0,.9);color:#fff;text-align:center;padding:25px 10px 30px;position:sticky;top:0;z-index:1000;}
+    header img.logo{max-width:260px;height:auto;margin-bottom:10px;}
+    header h1{font-size:2.6rem;margin:10px 0 5px;color:#ff0000;text-shadow:2px 2px #300000;}
+    header p{margin:0;color:#ddd;}
+    nav{margin-top:15px;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;}
+    nav a{text-decoration:none;font-weight:600;padding:6px 10px;border-radius:4px;transition:background .3s;}
+    nav a:hover{background:#ff0000;color:#fff;}
+
+    /* ===== SECTIONS ===== */
+    section{padding:50px 20px;max-width:1200px;margin:auto;background:rgba(255,255,255,.9);border-radius:10px;margin-bottom:40px;}
+    h2{text-align:center;color:#d00000;font-size:2.1rem;margin-bottom:25px;}
+
+    /* ===== FEEDBACK CTA ===== */
+    #feedback p{text-align:center;}
+    .button{display:inline-block;padding:10px 18px;margin:12px 5px 0;background:#d00000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;transition:background .3s;}
+    .button:hover{background:#b00000;}
+    .button.big{font-size:1.2rem;padding:14px 28px;}
+
+    /* ===== CATALOG ===== */
+    .category{opacity:0;transform:translateY(60px);transition:all .6s ease-out;text-align:center;margin-bottom:60px;}
+    .category.show{opacity:1;transform:translateY(0);}
+    .category h3{font-size:1.9rem;color:#d00000;margin-bottom:18px;}
+    .category img{width:100%;max-width:600px;height:auto;border-radius:10px;display:block;margin:0 auto 18px;}
+    .category p{font-size:1.15rem;max-width:600px;margin:0 auto;}
+
+    /* ===== BRANDS (marquee) ===== */
+    #brands .brand-container{overflow:hidden;}
+    .brand-track{display:inline-flex;gap:40px;font-size:1.35rem;font-weight:600;white-space:nowrap;animation:marquee 25s linear infinite;}
+    .brand-track span{white-space:nowrap;}
+    @keyframes marquee{
+      from{transform:translateX(100%);}to{transform:translateX(-100%);} }
+
+    /* ===== CONTACTS & FORM ===== */
+    .contact-info{background:rgba(255,255,255,.95);padding:20px;border-radius:8px;margin-bottom:25px;box-shadow:0 2px 5px rgba(0,0,0,.1);}
+    .map iframe{width:100%;height:300px;border:none;border-radius:8px;margin-bottom:25px;}
+    form{background:rgba(255,255,255,.95);padding:30px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,.1);}form h3{margin-top:0;color:#d00000;}form label{display:block;margin-top:12px;font-weight:bold;}form input,form textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #ccc;border-radius:6px;font-size:1rem;}form textarea{min-height:120px;resize:vertical;}form button{background:#d00000;color:#fff;border:none;padding:14px 28px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:1rem;margin-top:10px;transition:background .3s;}form button:hover{background:#b00000;}
+
+    /* ===== FOOTER ===== */
+    footer{background:rgba(0,0,0,.9);color:#fff;text-align:center;padding:18px 10px;font-size:.9rem;}
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px){header h1{font-size:2.1rem;} .brand-track{font-size:1.15rem;} .category img{max-width:100%;}}
+  </style>
 </head>
 <body>
   <!-- ========= HEADER ========= -->
@@ -77,11 +133,18 @@
     <!-- ========= BRANDS ========= -->
     <section id="brands">
       <h2>Бренди</h2>
-      <div class="brand-list">
-        <span>Bosch</span><span>Sachs</span><span>Lemförder</span><span>Brembo</span><span>Mahle</span>
-        <span>SKF</span><span>NGK</span><span>KYB</span><span>TRW</span><span>Valeo</span>
-        <span>ATE</span><span>Febi</span><span>Gates</span><span>Denso</span><span>MANN‑Filter</span>
-        <span>Bilstein</span><span>Continental</span>
+      <div class="brand-container">
+        <div class="brand-track">
+          <span>Bosch</span><span>Sachs</span><span>Lemförder</span><span>Brembo</span><span>Mahle</span>
+          <span>SKF</span><span>NGK</span><span>KYB</span><span>TRW</span><span>Valeo</span>
+          <span>ATE</span><span>Febi</span><span>Gates</span><span>Denso</span><span>MANN‑Filter</span>
+          <span>Bilstein</span><span>Continental</span>
+          <!-- дублюємо для безперервної стрічки -->
+          <span>Bosch</span><span>Sachs</span><span>Lemförder</span><span>Brembo</span><span>Mahle</span>
+          <span>SKF</span><span>NGK</span><span>KYB</span><span>TRW</span><span>Valeo</span>
+          <span>ATE</span><span>Febi</span><span>Gates</span><span>Denso</span><span>MANN‑Filter</span>
+          <span>Bilstein</span><span>Continental</span>
+        </div>
       </div>
     </section>
 
@@ -98,16 +161,10 @@
       </div>
 
       <div class="map">
-        <iframe
-          title="Мапа — AVTOZONA"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.005022705162!2d30.489054376884035!3d50.58251987161801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cecdba8cb4a7%3A0x6c27959a212e0f77!2z0JrRg9C80LDRgtC-0LLRgdGM0LrQsCDQn9C10YDQtdC60YHRgiwg0JrQuNGX0LIg0L_RgNC-0YHQv9C10LrRgiwg0LLRg9C70LjRhtGPINCf0L7Qu9C40YbQsA!5e0!3m2!1suk!2sua!4v1721021842497!5m2!1suk!2sua"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
+        <iframe title="Мапа — AVTOZONA" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.005022705162!2d30.489054376884035!3d50.58251987161801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cecdba8cb4a7%3A0x6c27959a212e0f77!2z0JrRg9C80LDRgtC-0LLRgdGM0LrQsCDQn9C10YDQtdC60YHRgiwg0JrQuNGX0LIg0L_RgNC-0YHQv9C10LrRgiwg0LLRg9C70LjRhtGPINCf0L7Qu9C40YbQsA!5e0!3m2!1suk!2sua!4v1721021842497!5m2!1suk!2sua" loading="lazy" allowfullscreen></iframe>
       </div>
 
       <form action="https://formsubmit.co/info.avtozona@gmail.com" method="POST">
-        <!-- formsubmit.co надсилає листа безпосередньо на вказану адресу -->
         <input type="hidden" name="_subject" value="Новий запит з сайту AVTOZONA">
         <input type="hidden" name="_captcha" value="false">
 
@@ -128,7 +185,22 @@
 
   <!-- ========= FOOTER ========= -->
   <footer>
-    <p>&copy; 2025 AVTOZONA — Всі права захищені</p>
+    <p>&copy; 2025 AVTOZONA — Всі права захищені</p>
   </footer>
+
+  <!-- ========= JS: lazy reveal categories ========= -->
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const observer=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.classList.add("show");
+            observer.unobserve(e.target);
+          }
+        });
+      },{threshold:0.15});
+      document.querySelectorAll('.category').forEach(el=>observer.observe(el));
+    });
+  </script>
 </body>
 </html>
