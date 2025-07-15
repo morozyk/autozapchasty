@@ -2,102 +2,114 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AVTOZONA - Автозапчастини</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header img.logo {
-      max-width: 250px;
-      margin-bottom: 10px;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      color: #d00000;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 20px;
-    }
-    .category {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-    .category img {
-      max-width: 200px;
-      border-radius: 10px;
-    }
-    .contact-info p {
-      margin: 5px 0;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px 5px;
-      background-color: #d00000;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .map iframe {
-      border: 0;
-      width: 100%;
-      height: 300px;
-      margin-top: 20px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    form button {
-      background-color: #d00000;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    footer {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <img src="e2a4d914-5cde-484b-bb34-cc85f63cca40.png" alt="AVTOZONA Logo" class="logo" />
+    <img src="efc6d69f-0960-43a5-b12e-d9158776e331.png" alt="AVTOZONA Logo" class="logo" />
     <h1>AVTOZONA</h1>
-    <p>Your One-Stop Au
+    <p>Your One-Stop Auto Parts Store</p>
+    <nav>
+      <a href="#about">Про нас</a>
+      <a href="#catalog">Асортимент</a>
+      <a href="#brands">Бренди</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Про нас</h2>
+      <p>AVTOZONA — ваш надійний партнер у світі автозапчастин! Ми пропонуємо великий вибір якісних деталей для легкових і вантажних авто. Працюємо з провідними брендами, гарантуємо оперативну доставку та відмінне обслуговування.</p>
+    </section>
+
+    <section id="catalog">
+      <h2>Асортимент</h2>
+
+      <div class="category">
+        <img src="https://i.imgur.com/TfMksc6.jpg" alt="Гальмівна система" />
+        <div>
+          <h3>Гальмівна система</h3>
+          <p>Диски, колодки, супорти — усе для безпечного гальмування.</p>
+        </div>
+      </div>
+
+      <div class="category">
+        <img src="https://i.imgur.com/bK1Fo2O.jpg" alt="Підвіска та рульове керування" />
+        <div>
+          <h3>Підвіска та рульове керування</h3>
+          <p>Амортизатори, тяги, шарові — для комфорту та контролю.</p>
+        </div>
+      </div>
+
+      <div class="category">
+        <img src="https://i.imgur.com/lHyM9zq.jpg" alt="Двигуни та комплектуючі" />
+        <div>
+          <h3>Двигуни та комплектуючі</h3>
+          <p>Фільтри, ремені, прокладки — все, щоб мотор працював довго.</p>
+        </div>
+      </div>
+
+      <div class="category">
+        <img src="https://i.imgur.com/EnCJr2u.jpg" alt="Електрообладнання" />
+        <div>
+          <h3>Електрообладнання</h3>
+          <p>Акумулятори, стартери, датчики — надійна електрика.</p>
+        </div>
+      </div>
+
+      <div class="category">
+        <img src="https://i.imgur.com/w1V9fB9.jpg" alt="Кузовні запчастини" />
+        <div>
+          <h3>Кузовні запчастини</h3>
+          <p>Крила, бампери, дзеркала — зовнішній вигляд вашого авто.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands">
+      <h2>Бренди</h2>
+      <p>Співпрацюємо з лідерами ринку: Bosch, Sachs, Lemforder, Brembo, Mahle та багатьма іншими.</p>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакти</h2>
+      <div class="contact-info">
+        <p><strong>Телефон:</strong> +380 98 097 44 18</p>
+        <p><strong>Email:</strong> info.avtozona@gmail.com</p>
+        <p><strong>Адреса:</strong> Київська обл. м. Вишгород, вул. Набережна 7</p>
+        <a class="button" href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        <a class="button" href="viber://chat?number=%2B380980974418">Viber</a>
+      </div>
+      <div class="map">
+        <iframe
+          title="Мапа - AVTOZONA"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.005022705162!2d30.489054376884035!3d50.58251987161801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cecdba8cb4a7%3A0x6c27959a212e0f77!2z0JrRg9C80LDRgtC-0LLRgdGM0LrQsCDQn9C10YDQtdC60YHRgiwg0JrQuNGX0LIg0L_RgNC-0YHQv9C10LrRgiwg0LLRg9C70LjRhtGPINCf0L7Qu9C40YbQsA!5e0!3m2!1suk!2sua!4v1721021842497!5m2!1suk!2sua"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <form action="https://formspree.io/f/xgepqvqq" method="POST">
+        <h3>Зворотний зв'язок</h3>
+        <label for="name">Ім’я:</label>
+        <input type="text" id="name" name="name" required placeholder="Ваше ім’я" />
+
+        <label for="contact">Контакт:</label>
+        <input type="text" id="contact" name="contact" required placeholder="Номер телефону або пошта" />
+
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" required placeholder="Ваш запит?"></textarea>
+
+        <button type="submit">Відправити</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AVTOZONA — Всі права захищені</p>
+  </footer>
+</body>
+</html>
